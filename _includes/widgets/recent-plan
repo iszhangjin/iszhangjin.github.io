@@ -1,0 +1,9 @@
+<div class="widget">
+    <div class="widget-title">
+        <i class="icon-edit"> 最近计划</i>
+    </div>
+    <ul class="widget-content plan-items">
+        <li class="plan-item">阅读《通往财富自由之路》，做读书笔记</li>
+        <li class="plan-item">完善博客</li>
+    </ul>
+</div>

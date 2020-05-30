@@ -6,8 +6,7 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-    let posts = $('.content_container').innerHTML;
-    console.log(posts);
+
     function find_posts(words, posts_data) {
         var matched_posts = [];
 
@@ -49,14 +48,15 @@ $(document).ready(function() {
             html += "<h4>Whoops,您输入的关键词没有搜索结果，请更换关键词！ O(∩_∩)O~</h4>"
         }
         $('.content_container').html(html);
-        
+        $('.content_container').show();
     }
 
-    $('#query').on("change propertychange input", function() {
+    $('#query').on("change", function() {
         var query = $('#query').val();
         var words = query.split(" ")
-        <!-- $('#query').blur().attr('disabled', true); -->
-        <!-- $('.content_container').hide(); -->
+        console.log('input 输入变化');
+        $('#query').blur().attr('disabled', true);
+        $('.content_container').hide();
 
         $.ajax({
             url: "/assets/data/posts.json",
@@ -68,7 +68,7 @@ $(document).ready(function() {
             }
         });
 
-        <!-- $('#query').blur().attr('disabled', false); -->
+        $('#query').blur().attr('disabled', false);
 
         return false;
     });

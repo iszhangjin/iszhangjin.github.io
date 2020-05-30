@@ -6,8 +6,7 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-    let posts = $('.content_container').innerHTML;
-    console.log(posts);
+
     function find_posts(words, posts_data) {
         var matched_posts = [];
 
